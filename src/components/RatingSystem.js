@@ -22,7 +22,7 @@ function RatingSystem() {
 
   return (
     <div>
-      <div>{stars}</div>
+      <div  className='flex'>{stars}</div>
       <h2>{word}</h2>
     </div>
   );

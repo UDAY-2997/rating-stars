@@ -26,7 +26,12 @@ h2 {
 }
 
 .grid {
-  height: 200px;
+  height: 160px;
+}
+
+.flex {
+  display: flex;
+  margin: 20px;
 }
 
 button {
