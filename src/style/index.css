@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+body {
+  background-color: #05060d;
+}
+
+.container {
+  width: min(100% - 30px, 1280px);
+  margin-inline: auto;
+}
+
+h1,
+h2 {
+  background: linear-gradient(0deg, rgba(98, 231, 255) 0%, rgba(10, 178, 207) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.star {
+  display: grid;
+  text-align: center;
+  place-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.grid {
+  height: 200px;
+}
+
+button {
+  width: 130px;
+  height: 35px;
+  font-weight: 500;
+  color: #212534;
+  border-radius: 5px;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 5px 5px 12px 3px rgba(255, 255, 255, .5);
+  outline: none;
+}
+
+.dialog {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(0deg, rgba(98, 231, 255) 0%, rgba(0, 216, 255) 100%);
+  border: none;
+}
+
+.dialog:hover {
+  background: rgb(0, 3, 255);
+  background: linear-gradient(0deg, rgba(0, 216, 255) 0%, rgba(98, 231, 255) 100%);
+}
+
+.dialog-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-data {
+  padding: 20px;
+  border-radius: 4px;
+  max-width: 400px;
+  text-align: center;
+  width: 250px;
+  height: 250px;
+  margin: 20px auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-main {
+  display: inline-block;
+  border-radius: 50%;
+  border: 10px solid #00d8ff;
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+}
+
+.dialog-main,
+.dialog-main:before,
+.dialog-main:after {
+  position: absolute;
+  display: inline-block;
+  width: 200px;
+  height: 70px;
+  border-radius: 50%;
+  border: 10px solid #00d8ff;
+}
+
+.dialog-logo,
+.dialog-main,
+.dialog-main:before,
+.dialog-main:after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #00d8ff;
+}
+
+.dialog-main:before,
+.dialog-main:after {
+  content: "";
+}
+
+.dialog-main:after {
+  transform: rotate(-57deg);
+}
+
+.dialog-main:before {
+  transform: rotate(57deg);
+}
+
+@keyframes rotate {
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
