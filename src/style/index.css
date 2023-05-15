@@ -53,6 +53,7 @@ button {
   position: fixed;
   bottom: 20px;
   right: 20px;
+  line-height: 14px;
   background: linear-gradient(0deg, rgba(98, 231, 255) 0%, rgba(0, 216, 255) 100%);
   border: none;
 }
@@ -75,6 +76,7 @@ button {
 }
 
 .dialog-data {
+  background: #efefef;
   padding: 20px;
   border-radius: 4px;
   max-width: 400px;
